@@ -1,0 +1,26 @@
+{
+  "name": "vrbarrage",
+  "version": "1.0.0",
+  "description": "avoid barrage in VR!",
+  "main": "doc/bundle.js",
+  "scripts": {
+    "build": "npx esbuild src/main.ts --bundle --outfile=docs/bundle.js",
+    "dev": "npx esbuild src/main.ts --sourcemap --bundle --outfile=docs/bundle.js",
+    "prod": "npx esbuild src/main.ts  --minify --define:process.env.NODE_ENV='\"production\"' --bundle --outfile=docs/bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cranpun/vrbarrage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cranpun/vrbarrage/issues"
+  },
+  "homepage": "https://github.com/cranpun/vrbarrage#readme",
+  "devDependencies": {
+    "esbuild": "^0.8.6"
+  }
+}

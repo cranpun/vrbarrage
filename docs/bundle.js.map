@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/module.ts", "../src/main.ts"],
+  "sourcesContent": ["export class Mod {\r\n    testtest() {\r\n        console.log(\"hello esbuild at module\");\r\n    }\r\n}\r\n", "import { Mod } from \"./module\";\r\n\r\nconst mod = new Mod();\r\nmod.testtest();"],
+  "mappings": ";;AAAA;AAAA,IACI;AACI,cAAQ,IAAI;AAAA;AAAA;;;ACApB,QAAM,MAAM,IAAI;AAChB,MAAI;",
+  "names": []
+}
