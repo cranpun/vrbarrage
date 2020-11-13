@@ -4,9 +4,10 @@
   "description": "avoid barrage in VR!",
   "main": "doc/bundle.js",
   "scripts": {
-    "build": "npx esbuild src/main.ts --bundle --outfile=docs/bundle.js",
-    "dev": "npx esbuild src/main.ts --sourcemap --bundle --outfile=docs/bundle.js",
-    "prod": "npx esbuild src/main.ts  --minify --define:process.env.NODE_ENV='\"production\"' --bundle --outfile=docs/bundle.js",
+    "up": "npx http-server docs -p 80",
+    "build": "npx esbuild src/main.ts --bundle --outfile=docs/dist/bundles.js",
+    "dev": "npx esbuild src/main.ts --sourcemap --target=chrome58,firefox57,safari11,edge16 --bundle --outfile=docs/dist/bundle.js",
+    "prod": "npx esbuild src/main.ts --minify --define:process.env.NODE_ENV='\"production\"' --target=chrome58,firefox57,safari11,edge16 --bundle --outfile=docs/dist/bundle.js ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +22,12 @@
   },
   "homepage": "https://github.com/cranpun/vrbarrage#readme",
   "devDependencies": {
-    "esbuild": "^0.8.6"
+    "@types/aframe": "^1.0.2",
+    "aframe": "^1.0.4",
+    "esbuild": "^0.8.6",
+    "http-server": "^0.12.3"
+  },
+  "dependencies": {
+    "@types/node": "^14.14.7"
   }
 }

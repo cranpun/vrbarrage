@@ -10,10 +10,15 @@
 
     <!-- my library -->
     <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="bundle.js"></script>
+    <script type="text/javascript" src="dist/bundle.js?v=1"></script>
 
   </head>
   <body>
-  first commit
+    <a-scene id="vrb-scene" init-vrbbarrage>
+      <a-assets id="vrb-assets">
+        <img id="sky" src="50427957172_623bab9432_4k.jpg">
+      </a-assets>
+      <a-sky id="vbr-sky" src="#sky"></a-sky>
+    </a-scene>
   </body>
 </html>

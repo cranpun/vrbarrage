@@ -1,4 +1,5 @@
-import { Mod } from "./module";
+require("aframe");
+// import { registerComponent } from "aframe";
+import { vrbbarageRegister } from "./VRBBarrage";
 
-const mod = new Mod();
-mod.testtest();
+vrbbarageRegister();
