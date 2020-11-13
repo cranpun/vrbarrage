@@ -55,7 +55,7 @@ export class VRBBarrage {
     private makeFrompos(i: number): { x: number, y: number, z: number } {
         const dist = 10;
         // 2πをcountsで一周
-        const theta = i * (2 * Math.PI / this.counts);
+        const theta = i * (2 * Math.PI / this.counts) + Math.PI;
 
         // y座標は固定。xはsin、zはcos
         const ret = {
